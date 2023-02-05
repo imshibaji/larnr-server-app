@@ -5,17 +5,10 @@ import { DatabaseModule } from './configs/database.module';
 import { AdminModule } from './admin/admin.module';
 import { FrontendModule } from './frontend/frontend.module';
 import { Routes } from '@nestjs/core';
-
-const routes: Routes = [
-  {
-    path: '/',
-    module: FrontendModule,
-    children: [{ path: '/admin', module: AdminModule }],
-  },
-];
+import { AuthModule } from './auth/auth.module';
 
 @Module({
-  imports: [DatabaseModule, FrontendModule, AdminModule],
+  imports: [DatabaseModule, FrontendModule, AdminModule, AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })

@@ -24,7 +24,7 @@ export class UserService {
     const val = req.query._order == 'DESC' ? 'DESC' : 'ASC';
 
     const start = req.query._start || 0;
-    const end = req.query._end || 5;
+    const end = req.query._end || 10;
     const take = +end - +start;
     // console.log(start, end, sort, order, take);
     return this.userRepository
@@ -37,6 +37,10 @@ export class UserService {
 
   findAll() {
     return this.userRepository.find();
+  }
+
+  findOneBy(obj) {
+    return this.userRepository.findOneByOrFail(obj);
   }
 
   findOne(id: number) {
