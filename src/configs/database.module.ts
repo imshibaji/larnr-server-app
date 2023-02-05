@@ -12,7 +12,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       database: 'larnr',
       entities: [__dirname + '/../**/*.entity{.ts,.js}'],
       synchronize: true,
-      logging: false,
+      logging: true,
     }),
   ],
   exports: [TypeOrmModule],

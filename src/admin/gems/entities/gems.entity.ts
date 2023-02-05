@@ -18,13 +18,13 @@ export class gem {
   @Column({ length: 255 })
   details: string;
 
-  @Column('double precision' ,{ precision: 8, scale: 2 })
+  @Column()
   addition_gems: number;
 
-  @Column('double precision',{ precision: 8, scale: 2 })
+  @Column()
   withdraw_gems: number;
 
-  @Column('double precision' ,{ precision: 8, scale: 2 })
+  @Column()
   balance_gems: number;
 
   @Column({ name: 'created_at', type: 'timestamp' })

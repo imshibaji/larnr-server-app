@@ -4,7 +4,6 @@ import { GemsController } from './gems.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { gem } from './entities/gems.entity';
 
-
 @Module({
   imports: [TypeOrmModule.forFeature([gem])],
   controllers: [GemsController],

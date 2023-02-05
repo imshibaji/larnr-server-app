@@ -13,56 +13,56 @@ export class video {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({length: 255 })
+  @Column({ length: 255 })
   title: string;
 
-  @Column({length: 255})
+  @Column({ length: 255 })
   slug: string;
 
-  @Column({length: 255})
+  @Column({ length: 255 })
   image_path: string;
 
-  @Column({length: 255})
+  @Column({ length: 255 })
   video_path: string;
 
-  @Column({length: 255})
+  @Column({ length: 255 })
   keywords: string;
 
-  @Column({length: 255})
+  @Column({ length: 255 })
   description: string;
 
-  @Column({length: 255})
+  @Column({ length: 255 })
   canonical: string;
 
-  @Column({type:'text'})
+  @Column({ type: 'text' })
   details: string;
 
-  @Column({length: 10,default:'free'})
+  @Column({ length: 10, default: 'free' })
   status: string;
 
-  @Column({length: 255})
+  @Column({ length: 255 })
   videoable_type: string;
 
-  @Column({type: 'bigint'})
-  videoable_id : number;
-  
+  @Column({ type: 'bigint' })
+  videoable_id: number;
+
   @Column({ name: 'user_id', type: 'int' })
   userId: number;
 
   @Column({ name: 'catagory_id', type: 'int' })
   categoryId: number;
 
-  @Column({ name: 'views', type: 'int'})
+  @Column({ name: 'views', type: 'int' })
   views: number;
 
-  @Column({ name: 'likes', type: 'int'})
+  @Column({ name: 'likes', type: 'int' })
   likes: number;
-  
-  @Column({length:10,default:'draft'})
+
+  @Column({ length: 10, default: 'draft' })
   type: string;
 
-  @Column({name: 'approved', type: 'tinyint'})
-  approved: number;
+  @Column({ name: 'approved' })
+  approved: boolean;
 
   @Column({ name: 'created_at', type: 'timestamp' })
   createdAt: Date;
