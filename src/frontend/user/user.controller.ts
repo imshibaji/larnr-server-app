@@ -36,7 +36,7 @@ export class UserController {
       orgname: faker.company.name(),
       whatsapp: faker.phone.number(),
       address:
-        faker.address.secondaryAddress() + ', ' + faker.address.streetAddress,
+        faker.address.secondaryAddress() + ', ' + faker.address.streetAddress(),
       city: faker.address.cityName(),
       pincode: faker.address.zipCode(),
       state: faker.address.state(),

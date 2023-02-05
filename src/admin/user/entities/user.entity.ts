@@ -8,8 +8,8 @@ export class User {
   @Column({ length: 255 })
   email: string;
 
-  @Column({ name: 'email_verified_at', type: 'timestamp' })
-  emailVerifiedAt: Date;
+  @Column({ name: 'email_verified_at', type: 'timestamp', nullable: true })
+  emailVerifiedAt?: Date;
 
   @Column()
   password: string;
@@ -21,9 +21,9 @@ export class User {
   lname: string;
 
   @Column({ name: 'api_token', length: 80 })
-  apiToken: string;
+  apiToken?: string;
 
-  @Column({ length: 15 })
+  @Column({ length: 50 })
   mobile: string;
 
   @Column()
@@ -35,7 +35,7 @@ export class User {
   @Column({ length: 255 })
   orgname: string;
 
-  @Column({ length: 15 })
+  @Column({ length: 50 })
   whatsapp: string;
 
   @Column({ length: 255 })
@@ -69,7 +69,7 @@ export class User {
   manageByUserId: number;
 
   @Column({ name: 'remember_token', length: 100 })
-  rememberToken: string;
+  rememberToken?: string;
 
   @Column({ name: 'created_at', type: 'timestamp' })
   createAt: Date;
@@ -78,5 +78,5 @@ export class User {
   modifiedAt: Date;
 
   @Column({ name: 'deleted_at', type: 'timestamp', default: new Date() })
-  deletedAt: Date;
+  deletedAt?: Date;
 }

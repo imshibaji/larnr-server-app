@@ -4,14 +4,15 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'mysql',
+      type: 'postgres',
       host: 'localhost',
-      port: 3306,
-      username: 'root',
+      port: 5432,
+      username: 'postgres',
       password: 'password',
       database: 'larnr',
       entities: [__dirname + '/../**/*.entity{.ts,.js}'],
-      synchronize: false,
+      synchronize: true,
+      logging: false,
     }),
   ],
   exports: [TypeOrmModule],
