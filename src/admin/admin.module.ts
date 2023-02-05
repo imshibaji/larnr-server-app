@@ -4,6 +4,6 @@ import { UserModule } from './user/user.module';
 import { DatabaseModule } from '../configs/database.module';
 
 @Module({
-  imports: [DatabaseModule, CatagoryModule, UserModule],
+  imports: [DatabaseModule, CatagoryModule, GemModule, ArticlesModule,CoursesModule,VideosModule],
 })
 export class AdminModule {}
