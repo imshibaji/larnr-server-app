@@ -9,7 +9,7 @@ import { ApiTags } from '@nestjs/swagger';
     type: User,
   },
 })
-@ApiTags('Admin Users')
+@ApiTags('User')
 @Controller('admin/users')
 export class UserController implements CrudController<User> {
   constructor(public service: UserService) {}
