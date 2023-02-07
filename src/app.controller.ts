@@ -14,5 +14,4 @@ export class AppController {
   about(): string {
     return 'somnath';
   }
- 
 }
