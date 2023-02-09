@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Query, Req, UseGuards } from '@nestjs/common';
 import { AppService } from './app.service';
-import { AuthService } from './auth/auth.service';
+//import { AuthService } from './auth/auth.service';
 import { JwtAuthGuard } from './auth/guards/jwt-auth.guard';
 import { LoginDto } from './frontend/user/dto/login-user.dto';
 import { LocalAuthGuard } from './auth/guards/local-auth.guard';
@@ -9,7 +9,7 @@ import { LocalAuthGuard } from './auth/guards/local-auth.guard';
 export class AppController {
   constructor(
     private readonly appService: AppService,
-    private authService: AuthService,
+    /*private authService: AuthService,*/
   ) {}
 
   @Get()
@@ -22,7 +22,7 @@ export class AppController {
     return 'somnath';
   }
 
-  @UseGuards(LocalAuthGuard)
+ /* @UseGuards(LocalAuthGuard)
   @Post('auth/login')
   async login(@Query() login: LoginDto) {
     return this.authService.login(login);
@@ -32,5 +32,5 @@ export class AppController {
   @Get('profile')
   getProfile(@Req() req) {
     return req.user;
-  }
+  }*/
 }
