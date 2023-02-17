@@ -14,6 +14,7 @@ import { TopicassignmentModule } from './topicassignment/topicassignment.module'
 import { TopicModule } from './topic/topic.module';
 import { TeacherModule } from './teacher/teacher.module';
 import { TagModule } from './tag/tag.module';
+import { TaggableModule } from './taggable/taggable.module';
 
 
 @Module({
@@ -32,7 +33,8 @@ import { TagModule } from './tag/tag.module';
     TopicassignmentModule,
     TopicModule,
     TeacherModule,
-    TagModule
+    TagModule,
+    TaggableModule
   ],
 })
 export class AdminModule {}
