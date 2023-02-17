@@ -15,7 +15,9 @@ import { UpdateUserDto } from './dto/update-user.dto';
 import { Request, Response } from 'express';
 import { faker } from '@faker-js/faker';
 import { ApiTags } from '@nestjs/swagger';
+import { Public } from 'src/auth/guards/jwt-auth.guard';
 
+@Public()
 @ApiTags('Users')
 @Controller('users')
 export class UserController {
