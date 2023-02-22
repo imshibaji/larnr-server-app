@@ -1,15 +1,7 @@
 import { CrudController } from '@nestjsx/crud/lib/interfaces/crud-controller.interface';
-import {
-  Controller,
-  Get,
-  Post,
-  Body,
-  Patch,
-  Param,
-  Delete,
-} from '@nestjs/common';
+import { Controller } from '@nestjs/common';
 import { TopicassignmentService } from './topicassignment.service';
-import {  topicassignment } from './entities/topicassignment.entity';
+import { topicassignment } from './entities/topicassignment.entity';
 import { Crud } from '@nestjsx/crud';
 import { ApiTags } from '@nestjs/swagger';
 
@@ -20,6 +12,8 @@ import { ApiTags } from '@nestjs/swagger';
 })
 @ApiTags('Topicassignment')
 @Controller('admin/topicassignments')
-export class TopicassignmentController implements CrudController<topicassignment> {
+export class TopicassignmentController
+  implements CrudController<topicassignment>
+{
   constructor(public service: TopicassignmentService) {}
 }
