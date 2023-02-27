@@ -3,7 +3,9 @@ import { UserService } from './user.service';
 import { Crud, CrudController } from '@nestjsx/crud';
 import { User } from './entities/user.entity';
 import { ApiTags } from '@nestjs/swagger';
+import { Public } from 'src/auth/decorators/access.decorator';
 
+@Public()
 @Crud({
   model: {
     type: User,
