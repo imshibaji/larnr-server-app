@@ -1,15 +1,12 @@
 import {
   ExecutionContext,
   Injectable,
-  SetMetadata,
   UnauthorizedException,
 } from '@nestjs/common';
 import { ContextIdFactory, ModuleRef, Reflector } from '@nestjs/core';
 import { AuthGuard } from '@nestjs/passport';
 import { AuthService } from '../auth.service';
-
-export const IS_PUBLIC_KEY = 'isPublic';
-export const Public = () => SetMetadata(IS_PUBLIC_KEY, true);
+import { IS_PUBLIC_KEY } from '../decorators/access.decorator';
 
 @Injectable()
 export class JwtAuthGuard extends AuthGuard('jwt') {

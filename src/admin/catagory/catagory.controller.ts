@@ -4,7 +4,9 @@ import { CatagoryService } from './catagory.service';
 import { Catagory } from './entities/catagory.entity';
 import { Crud } from '@nestjsx/crud';
 import { ApiTags } from '@nestjs/swagger';
+import { Public } from 'src/auth/decorators/access.decorator';
 
+@Public()
 @Crud({
   model: {
     type: Catagory,

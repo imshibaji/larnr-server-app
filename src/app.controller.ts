@@ -1,7 +1,7 @@
+import { Public } from './auth/decorators/access.decorator';
 import { Controller, Get, Post, Query, Req } from '@nestjs/common';
 import { AppService } from './app.service';
 import { AuthService } from './auth/auth.service';
-import { Public } from './auth/guards/jwt-auth.guard';
 import { LoginDto } from './frontend/user/dto/login-user.dto';
 
 @Public()

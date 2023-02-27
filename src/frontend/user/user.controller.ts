@@ -1,3 +1,4 @@
+import { Public } from './../../auth/decorators/access.decorator';
 import {
   Controller,
   Get,
@@ -15,7 +16,6 @@ import { UpdateUserDto } from './dto/update-user.dto';
 import { Request, Response } from 'express';
 import { faker } from '@faker-js/faker';
 import { ApiTags } from '@nestjs/swagger';
-import { Public } from 'src/auth/guards/jwt-auth.guard';
 
 @Public()
 @ApiTags('Users')

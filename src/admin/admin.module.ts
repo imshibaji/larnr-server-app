@@ -16,7 +16,6 @@ import { TeacherModule } from './teacher/teacher.module';
 import { TagModule } from './tag/tag.module';
 import { TaggableModule } from './taggable/taggable.module';
 
-
 @Module({
   imports: [
     DatabaseModule,
@@ -34,7 +33,7 @@ import { TaggableModule } from './taggable/taggable.module';
     TopicModule,
     TeacherModule,
     TagModule,
-    TaggableModule
+    TaggableModule,
   ],
 })
 export class AdminModule {}
